@@ -1,10 +1,35 @@
-import { Button } from "@/components/ui/button";
+import { NavbarWrapper } from "./_shared_components/NavbarWrapper";
+import Footer from "./_shared_components/Footer";
+import { HeroSection } from "./_components/HeroSection";
+import { EventsSection } from "./_components/EventsSection";
+import { AboutSection } from "./_components/AboutSection";
+import { ValuesSection } from "./_components/ValuesSection";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Agarwal Samaj</h1>
-      <Button>Click me</Button>
-    </div>
+    <>
+      <NavbarWrapper>
+        <main className="flex flex-col">
+
+          {/* HERO */}
+          <HeroSection />
+
+          {/* EVENTS */}
+          <EventsSection />
+
+          {/* ABOUT */}
+          <AboutSection />
+
+          {/* VALUES */}
+          <ValuesSection />
+
+        </main>
+      </NavbarWrapper>
+      <Footer />
+    </>
   );
 }
+
+
+
+
