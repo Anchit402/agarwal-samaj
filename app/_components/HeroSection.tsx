@@ -1,9 +1,13 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Users } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 
 export const HeroSection = () => {
+  const router = useRouter();
   return <section className="bg-background">
     <div className="mx-auto max-w-7xl px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -25,7 +29,7 @@ export const HeroSection = () => {
         </p>
 
         <div className="flex gap-4">
-          <Button size="lg">Become a Member</Button>
+          <Button size="lg" onClick={() => router.push("/signin")}>Become a Member</Button>
           <Button variant="outline" size="lg">
             Learn More
           </Button>

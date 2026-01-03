@@ -1,4 +1,4 @@
-import { NavbarWrapper } from "../_shared_components/NavbarWrapper";
+import { NavbarWrapper } from "@/app/_shared_components/NavbarWrapper";
 
 export default function About() {
   return (

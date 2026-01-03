@@ -1,7 +1,10 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import Link from "next/link"
+import { useRouter } from "next/navigation";
 import { FiMenu } from "react-icons/fi";
 
 
@@ -18,6 +21,7 @@ interface NavbarWrapperProps {
 }
 
 export const NavbarWrapper = ({ children }: NavbarWrapperProps) => {
+  const router = useRouter();
   return (
     <div className="grid grid-rows-[auto_1fr]">
       <nav className="flex items-center justify-between p-4 border-b">
@@ -33,7 +37,7 @@ export const NavbarWrapper = ({ children }: NavbarWrapperProps) => {
               {item.label}
             </Link>
           ))}
-          <Button>Join Now</Button>
+          <Button onClick={() => router.push("/signin")}>Join Now</Button>
         </div>
 
         {/* Mobile Nav */}
@@ -56,7 +60,7 @@ export const NavbarWrapper = ({ children }: NavbarWrapperProps) => {
                     {item.label}
                   </Link>
                 ))}
-                <Button className={cn("mt-4 bg-orange-500 hover:bg-orange-600 text-white")}>
+                <Button className={cn("mt-4 bg-orange-500 hover:bg-orange-600 text-white")} onClick={() => router.push("/signin")}>
                   Join Now
                 </Button>
               </div>
