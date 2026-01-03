@@ -24,8 +24,9 @@ export default function Home() {
           <ValuesSection />
 
         </main>
+        <Footer />
       </NavbarWrapper>
-      <Footer />
+
     </>
   );
 }

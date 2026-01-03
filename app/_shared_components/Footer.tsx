@@ -4,7 +4,7 @@ import { Facebook, Globe, ThumbsUp, Share2, MapPin, Phone, Mail } from "lucide-r
 export default function Footer() {
   return (
     <footer className="bg-card border-t">
-      <div className="mx-auto max-w-7xl px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="mx-auto max-w-7xl px-6 py-20 grid grid-cols-1 md:grid-cols-3 gap-12">
 
         {/* Brand */}
         <div className="space-y-4">
@@ -56,25 +56,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Newsletter */}
-        <div className="space-y-4">
-          <h4 className="font-semibold">Stay Updated</h4>
-          <p className="text-sm text-muted-foreground">
-            Subscribe to our newsletter for event updates and news.
-          </p>
-
-          <div className="flex gap-2">
-            <input
-              placeholder="Your email address"
-              className="flex-1 rounded-md border bg-background px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-primary"
-            />
-            <button className="bg-primary text-primary-foreground px-4 rounded-md hover:opacity-90">
-              →
-            </button>
-          </div>
-        </div>
-
       </div>
 
       {/* Bottom bar */}
